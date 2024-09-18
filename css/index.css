@@ -39,7 +39,9 @@ h3 {
 p {
   margin: 0;
 }
-
+.blue-g-o {
+  color: var(--button-primary);
+}
 @media screen and (min-width: 960px) {
   h1 {
     font-size: 4.4rem;
