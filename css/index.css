@@ -1,10 +1,53 @@
 :root {
   --button-primary: #22a2f8;
-  --bg-primary: #121c42;
+  --dark-blue-1: #121c42;
   --bg-header: #fff;
   --bg-section: #f6fbff;
   --hover-color: #ded6ff;
   --bg-media-card: #f6f7fb;
   --bg-testimonial: #05263b;
   --bg-label: #e9f6ff;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Inter, Roboto, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--dark-blue-1);
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+  margin-top: 2.3rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+p {
+  margin: 0;
+}
+
+@media screen and (min-width: 960px) {
+  h1 {
+    font-size: 4.4rem;
+    margin-top: 2.3rem;
+    margin-bottom: 2.3rem;
+  }
+  h2 {
+    font-size: 4.8px;
+    margin-bottom: 2.5rem;
+  }
 }
