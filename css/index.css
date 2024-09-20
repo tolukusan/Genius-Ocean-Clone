@@ -34,6 +34,7 @@ h3 {
 h1 {
   font-size: 3.6rem;
   margin-top: 2.3rem;
+  line-height: 1;
 }
 
 h2 {
@@ -70,6 +71,8 @@ li {
   text-align: center;
   text-transform: capitalize;
   transition: all ease 0.3s;
+  white-space: nowrap;
+  max-width: max-content;
 }
 .links--primary {
   color: var(--bg-header);
@@ -226,7 +229,68 @@ nav ul {
 .h-nav-btn {
   display: none;
 }
-@media screen and (min-width: 960px) {
+.img-animate {
+  position: relative;
+  padding: 10px 15px;
+  max-width: 500px;
+}
+
+.main-img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+}
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translateY(-80px);
+  }
+  50% {
+    transform: translateY(-60px); /* Adjust float distance */
+  }
+}
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translateY(-60px);
+  }
+  50% {
+    transform: translateY(-80px); /* Adjust float distance */
+  }
+}
+.float-image1 {
+  position: absolute;
+  top: 50%; /* Adjust for positioning */
+  width: 50%;
+  height: auto;
+  animation: float1 3s ease-in-out infinite; /* Similar floating effect */
+  right: -40px;
+}
+.float-image2 {
+  position: absolute;
+  top: 50%; /* Adjust for positioning */
+  left: 200;
+  width: 50%;
+  height: auto;
+  animation: float2 3s ease-in-out infinite; /* Similar floating effect */
+  left: -40px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+.top-hero {
+  text-align: center;
+}
+.top-hero p {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 760px) {
   h1 {
     font-size: 4.4rem;
     margin-top: 2.3rem;
@@ -265,5 +329,11 @@ nav ul {
   }
   .h-nav-btn {
     display: contents;
+  }
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+  .top-hero {
+    text-align: left;
   }
 }
