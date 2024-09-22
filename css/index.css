@@ -11,6 +11,10 @@
   --bg-testimonial: #05263b;
   --bg-label: #e9f6ff;
   --dark-rgb: 5, 38, 59;
+  --base-rgb: 34, 162, 248;
+  --section-bg: #f6fbff;
+  --light-clr: #ded6ff;
+  --title-clr: #121c42;
 }
 html {
   font-size: 62.5%;
@@ -164,6 +168,7 @@ header {
   height: 75px;
   background-color: var(--bg-header);
   z-index: 999;
+  box-shadow: 0 0 5px rgba(var(--base-rgb), 0.2);
 }
 .wrapper {
   width: 100%;
@@ -283,12 +288,69 @@ nav ul {
   gap: 20px;
   align-items: center;
   justify-items: center;
+  background-color: var(--section-bg);
+  padding: 60px 0;
 }
 .top-hero {
   text-align: center;
 }
 .top-hero p {
   margin-bottom: 20px;
+}
+.service-section {
+  text-align: center;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+.service {
+  margin: 10px 5px;
+  padding: 38px 25px;
+  background: #f6f7fb;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  max-width: 300px;
+  text-align: left;
+}
+.service:hover {
+  color: var(--light-clr);
+}
+
+.service::before {
+  inset: 0 100% 100% 0;
+  position: absolute;
+  content: "";
+  background: var(--title-clr);
+  transition: all ease 0.3s;
+}
+.service:hover::before {
+  inset: 0;
+}
+.service__icon {
+  width: 100px;
+  height: 100px;
+  background: var(--bg-header);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.3s;
+  margin-bottom: 20px;
+}
+.service:hover .service__icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+.service > * {
+  position: relative;
+  z-index: 1;
+}
+.service img {
+  width: 70px;
+  height: auto;
 }
 @media screen and (min-width: 760px) {
   h1 {
@@ -297,7 +359,7 @@ nav ul {
     margin-bottom: 2.3rem;
   }
   h2 {
-    font-size: 4.8px;
+    font-size: 4.8rem;
     margin-bottom: 2.5rem;
   }
   header {
@@ -333,7 +395,11 @@ nav ul {
   .hero {
     grid-template-columns: 1fr 1fr;
   }
+
   .top-hero {
     text-align: left;
+  }
+  .services-list {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
