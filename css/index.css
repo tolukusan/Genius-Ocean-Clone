@@ -43,10 +43,12 @@ h1 {
 
 h2 {
   font-size: 2.8rem;
+  line-height: 1;
 }
 
 h3 {
   font-size: 2.2rem;
+  line-height: 1;
 }
 p {
   margin: 0;
@@ -288,17 +290,26 @@ nav ul {
   gap: 20px;
   align-items: center;
   justify-items: center;
-  background-color: var(--section-bg);
   padding: 60px 0;
 }
-.top-hero {
+.hero--intro {
+  background-color: var(--section-bg);
+}
+.hero--features {
+  background-color: var(--section-bg);
+}
+.top-hero--1 {
   text-align: center;
+}
+.top-hero--2 {
+  text-align: left;
 }
 .top-hero p {
   margin-bottom: 20px;
 }
 .service-section {
   text-align: center;
+  padding: 60px 0;
 }
 .services-list {
   display: grid;
