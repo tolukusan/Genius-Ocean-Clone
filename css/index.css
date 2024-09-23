@@ -230,7 +230,7 @@ nav {
   right: 30px;
   top: 20px;
 }
-nav ul {
+nav > ul {
   display: none;
 }
 .h-nav-btn {
